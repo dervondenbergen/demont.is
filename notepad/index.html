@@ -1,0 +1,113 @@
+<!doctype html>
+<!--
+  _   _  ____ _______ ______ _____        _____  
+ | \ | |/ __ \__   __|  ____|  __ \ /\   |  __ \ 
+ |  \| | |  | | | |  | |__  | |__) /  \  | |  | |
+ | . ` | |  | | | |  |  __| |  ___/ /\ \ | |  | |
+ | |\  | |__| | | |  | |____| |  / ____ \| |__| |
+ |_| \_|\____/  |_|  |______|_| /_/    \_\_____/ 
+
+-->
+<html>
+  <head>
+    <title>NOTEPAD</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <style>
+
+      body {
+        margin: 0;
+        font-size: 1em;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      html {
+        margin: 0;
+      }
+
+      main {
+        color: #333;
+        display: block;
+        height: calc(100% - 6.3em);
+        font-size: 1.5em;
+        padding: 1.5em;
+        font-family: Helvetica;
+        overflow: scroll;
+        outline: none;
+      }
+
+      button {
+        height: 5em;
+        width: 100%;
+        font-size: 1em;
+        background: #e67e22;
+        box-sizing: border-box;
+        border: 0.7em solid rgba(20,20,20,0.3);
+        color: #f5f5f5;
+        font-weight: bold;
+        outline: none;
+      }
+
+      button:hover {
+        background: #c86c1d;
+        cursor: pointer;
+      }
+      
+      button:active {
+        background: #ab5c18;
+      }
+
+  </style>
+  </head>
+  <body>
+    <main contenteditable="" autocorrect="off"></main>
+    <button id="button">Save</button>
+    <script type="text/javascript">
+
+      var button = document.querySelector('button');
+      var main = document.querySelector('main');
+
+      if (localStorage['note'] === undefined ) {
+        localStorage['note'] = 'Save your note by typing in here and clicking the Save Button.<br>You can also press CMD + S / CTRL + S'
+      }
+
+      function siteLoad () {
+        main.innerHTML = localStorage['note'];
+      }
+
+      function buttonSave () {
+        localStorage['note'] = main.innerHTML;
+      }
+
+      function keySave (e) {
+        if (e.keyCode === 83 && e.metaKey || e.keyCode === 83 && e.ctrlKey) {
+          e.preventDefault();
+          localStorage['note'] = main.innerHTML;
+        }
+      }
+
+      if (window.addEventListener) {
+
+        window.addEventListener('load', siteLoad, false);
+        button.addEventListener('click', buttonSave, false);
+        main.addEventListener('keydown', keySave, false);
+
+      } else if (window.attachEvent) {
+
+        window.attachEvent('onload', siteLoad);
+        button.attachEvent('onclick', buttonSave);
+        main.attachEvent('keydown', keySave);
+
+      } else {
+        
+        window.onload = siteLoad;
+        button.onclick = buttonSave;
+        main.onkeydown = keySave;
+
+      }
+
+    </script>
+  </body>
+</html>

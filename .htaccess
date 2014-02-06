@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{HTTPS} on [OR]
+RewriteCond %{ENV:HTTPS} on
+RewriteRule ^couchdb/(.*) http://localhost:21701/$1 [P]
+
+ErrorDocument 404 /404.html
