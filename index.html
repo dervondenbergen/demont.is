@@ -12,21 +12,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Felix De Montis</title>
-  <link id="favicon" href="" rel="icon" type="image/png" />
+  <link id="favicon" href="" rel="icon" type="image/png" >
+  <link id="iosicon" href="" rel="apple-touch-icon-precomposed" >
   <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
   <meta name="author" content="Felix De Montis, felix@demont.is" >
+  <meta name="apple-mobile-web-app-title" content="De Montis">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link id="iosopen" href=" rel="apple-touch-startup-image">
   <meta name="copyright" content="Felix De Montis" >
   <meta name="designer" content="Felix De Montis" >
   <meta name="web_author" content="Felix De Montis">
-  <meta name="google" content="notranslate" />
-  <meta property="og:title" content="Felix De Montis" />
-  <meta property="og:type" content="profile" />
-  <meta property="og:profile:first_name" content="Felix" />
-  <meta property="og:profile:last_name" content="De Montis" />
-  <meta property="og:profile:username" content="dervondenbergen" />
+  <meta name="google" content="notranslate" >
+  <meta property="og:title" content="Felix De Montis" >
+  <meta property="og:type" content="profile" >
+  <meta property="og:profile:first_name" content="Felix" >
+  <meta property="og:profile:last_name" content="De Montis" >
+  <meta property="og:profile:username" content="dervondenbergen" >
   <link rel="openid2.provider" href="https://openid.stackexchange.com/openid/provider">
   <link rel="openid2.local_id" href="https://openid.stackexchange.com/user/16a5e08e-a723-4493-8aff-0bc25c72b3a9">
-  <link rel="logo" type="image/svg" href="http://www.demont.is/logo.svg"/>
+  <link rel="logo" type="image/svg" href="http://www.demont.is/logo.svg">
   <style>
     @-ms-viewport {
       width: device-width;
@@ -155,7 +160,7 @@
       <a href="https://twitter.com/DerVonDenBergen">T</a>
       <a href="http://codepen.io/dervondenbergen">C</a>
       <a href="https://github.com/dervondenbergen">G</a>
-      <a itemprop="email" href="mailto:felix@demont.is">M</a>
+      <a itemprop="email" href="mailto:Felix De Montis<felix@demont.is>?subject=Hey there.">M</a>
     </div>
   </div>
   <a style="display:none" href='https://alpha.app.net/dervondenbergen' rel='me'>Felix De Montis</a>
@@ -174,18 +179,17 @@
     document.head.appendChild(s);
 
     var favicon = document.querySelector('#favicon');
+    var iosicon = document.querySelector('#iosicon');
+
     var canvas = document.createElement('canvas');
     canvas.width = canvas.height = "16";
     var ctx = canvas.getContext('2d');
-    ctx.beginPath();
-    ctx.moveTo(0,0);
-    ctx.lineTo(16,0);
-    ctx.lineTo(16,16);
-    ctx.lineTo(0,16);
-    ctx.closePath();
+    ctx.rect(0,0,16,16);
     ctx.fillStyle = colors[0];
     ctx.fill();
+    
     favicon.href = canvas.toDataURL();
+    iosicon.href = canvas.toDataURL();
 
   </script>
 </body>
