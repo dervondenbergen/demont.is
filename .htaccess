@@ -5,7 +5,8 @@ RewriteRule ^couchdb/(.*) http://localhost:21701/$1 [P]
 
 ErrorDocument 404 /404.html
 
-# Deflate Compression by FileType
+# Both compression parts are from http://j.mp/OjudZH
+
 <IfModule mod_deflate.c>
  AddOutputFilterByType DEFLATE text/plain
  AddOutputFilterByType DEFLATE text/html
@@ -20,3 +21,14 @@ ErrorDocument 404 /404.html
  AddOutputFilterByType DEFLATE application/x-javascript
  AddOutputFilterByType DEFLATE application/x-shockwave-flash
 </IfModule>
+
+<ifModule mod_gzip.c>
+ mod_gzip_on Yes
+ mod_gzip_dechunk Yes
+ mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+ mod_gzip_item_include handler ^cgi-script$
+ mod_gzip_item_include mime ^text/.*
+ mod_gzip_item_include mime ^application/x-javascript.*
+ mod_gzip_item_exclude mime ^image/.*
+ mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>
