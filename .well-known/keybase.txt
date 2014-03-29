@@ -1,0 +1,66 @@
+==================================================================
+https://keybase.io/dervondenbergen
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://demont.is
+  * I am dervondenbergen (https://keybase.io/dervondenbergen) on keybase.
+  * I have a public key with fingerprint 9207 870E 293D 9F7E 2559  C6B4 EC2C 0583 355D 9DE6
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "9207870e293d9f7e2559c6b4ec2c0583355d9de6",
+            "host": "keybase.io",
+            "key_id": "ec2c0583355d9de6",
+            "uid": "deb6032788082a643be614270aac3a00",
+            "username": "dervondenbergen"
+        },
+        "service": {
+            "hostname": "demont.is",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1396101956,
+    "expire_in": 157680000,
+    "prev": "58d7722df49ea938b86459f4fa6aac11a6211ed7ae574ffc1ee404d45c6b2777",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.1.1
+Comment: https://keybase.io/crypto
+
+yMHzAnicbZFdSFRpGMdnzI90V3ArnYuM3ONFUsfhfH+Fu36RCyloYTBhTOfjPeNB
+PWc658youIIkuKGziheueyNum3SRhONY27bdDKIkBhapEYKiezFGlhuEQibhe4ba
+q96bl/d5fv//8zzvM5N9yJXlfoOmddNXRhLuJ/GdkOsis1jZgUiG0o4IHUgTSF6q
+pgeAGTQ13UYEhCcwlmMxQPCkwqssIGialxmJAjIhYzRHkjSt8ApgEBRpNCxHAW0k
+0QJezYAx+PBrCox+hQ8lEwqQGIwkWI7DOEJkKFICDE4RLCaKMilimANawNTFFpCk
+zbChK0CXgBkAOtKJIjAZ1mSY7Eh28D/YYui2V7OgPmgatiEbzTDcaNtBwVHZ7UEH
+awWS/7OBX9J0Bc4OBWFgWpqhIwIOSdnWHEec5Bkcw3maQRHQFtRM4NccgmYZDoPH
+KQPC0JLmFJYlCEWleCDyJCdxDEXzKqWKDBwJx0WGwHGgsCKgWUpVZRwACqMUiobf
+SrAsC+tb4JpuIAIL2xQD0NLSArpoh0yAdE7HG1Jd7ixXelqKsz1XVmbOl51+K2R8
++mGi//Sy58axcvdmVW6dL/PxkK/uTM/5U+Mb3+XmjYFIY/NZPTG8tO3vqfkw3bq5
+NrGKrHTnRF9Wpb5Y7p4peji8UP/n/j+jl++SnryPf80/y0GO/FFQ4Nl4F1OrRyui
+PzflzaADzzPnVisj932Dw8uJ9O1a39jV93ci9Ws/Zo98X3J99vhbq/BvaWd7a33r
+6IWquckHCeHe5PpgMNL2K7sYXZj9qX23+JLxtCHxi4oOZZTOlwTL+l5VFOcLrT23
+be/rvX//i6HTAxO3rHjtVH5/b3VX1KrpjcVLF1KKVn4/+Wj85tK5sn10y5M4/Ns3
+eydCk3psc2q3vK/Qi9etdh0AIV8Xuw==
+=9ule
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dervondenbergen
+
+==================================================================
+
